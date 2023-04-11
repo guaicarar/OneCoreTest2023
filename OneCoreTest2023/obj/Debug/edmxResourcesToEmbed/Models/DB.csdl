@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OneCoreDb2023Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="RFC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DIRECCION" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CP" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="CORREO" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="UsuId" />
+    </Key>
+    <Property Name="UsuId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsuNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UsuPASS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="OneCoreDb2023Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,47 @@
+﻿@model OneCoreTest2023.Models.ViewModels.ClienteViewModel
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+@using (Html.BeginForm("Editar", "Cliente", FormMethod.Post))
+
+{
+    <div class=" row">
+        <div class="col-md-12">
+            @Html.HiddenFor(d => d.ID)
+            <div>
+                @Html.LabelFor(d => d.NOMBRE)
+                @Html.TextBoxFor(d => d.NOMBRE, "", new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.RFC)
+                @Html.TextBoxFor(d => d.RFC, "", new { @class = "form-control" })
+            </div><div>
+                @Html.LabelFor(d => d.DIRECCION)
+                @Html.TextBoxFor(d => d.DIRECCION, "", new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.RFC)
+                @Html.TextBoxFor(d => d.RFC, "", new { @class = "form-control" })
+            </div><div>
+                @Html.LabelFor(d => d.CP)
+                @Html.TextBoxFor(d => d.CP, "", new { @class = "form-control" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.CORREO)
+                @Html.TextBoxFor(d => d.CORREO, "", new { @class = "form-control" })
+            </div>
+            <div>
+
+            </div>
+
+
+
+            <div claas="row" style="text-align:right;padding:5px;">
+                <input value="Guardar" class="btn btn-primary" type="submit" />
+            </div>
+        </div>
+    </div>
+}
+

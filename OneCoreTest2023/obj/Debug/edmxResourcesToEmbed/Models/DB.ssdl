@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OneCoreDb2023Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="150" />
+    <Property Name="RFC" Type="nvarchar" MaxLength="10" />
+    <Property Name="DIRECCION" Type="nvarchar" MaxLength="150" />
+    <Property Name="CP" Type="nvarchar" MaxLength="5" />
+    <Property Name="CORREO" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="UsuId" />
+    </Key>
+    <Property Name="UsuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsuNombre" Type="varchar" MaxLength="50" />
+    <Property Name="UsuPASS" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="OneCoreDb2023ModelStoreContainer">
+    <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
